@@ -1,0 +1,365 @@
+@media (max-width: 1024px) {
+
+    .header nav ul {
+        display: none;
+    }
+
+    #menu_toggle {
+        opacity: 0;
+    }
+      
+    .menu_btn {
+        display: flex; 
+        align-items: center;  
+        position: fixed;
+        top: 28px;
+        right: 5%;
+        width: 26px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 1;        
+    }
+      
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: yellow;
+    }
+    
+    .menu_btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    
+    .menu_btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    .header nav ul {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 25px;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 50px 0;
+        list-style: none;
+        text-align: center;
+        background-color: black;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2); 
+        
+        transition: right 1s, visibility 5s linear;
+    }
+    
+    .header nav ul li {
+        display: block;
+        padding: 12px 24px;
+        color: white;    
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .header nav ul li:hover {
+        background-color: #88b04b;
+    }
+    
+    #menu_toggle:checked ~ .menu_btn > span {
+        transform: rotate(45deg);
+    }
+    
+    #menu_toggle:checked ~ .menu_btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    
+    #menu_toggle:checked ~ .menu_btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    #menu_toggle:checked ~ ul {
+        visibility: visible; 
+        right: 0%;   
+    }
+    
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after {
+      transition-duration: .25s;
+    }  
+
+    .header-promo {
+        height: 550px;
+    }
+
+    .promo h2 {
+        font-size: 40px;
+    }
+
+    .promo span {
+        font-size: 45px;
+    }
+
+    .about-list .about-item {
+        width: 70%;
+    }
+
+    .portfolio-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item .portfolio-name {
+        margin-top: 5px;        
+    }
+
+    .portfolio-item .portfolio-description {
+        margin-bottom: 30px;
+    }
+
+    .our-team .teammates {
+        flex-direction: column;
+    }
+
+    .our-team .teammates .teammate:not(:last-child) {
+        margin: 0;
+    }
+
+    .our-team .teammates .teammate:nth-child(2) {
+        margin: 20px 0;
+    }
+
+    .logos ul {
+        flex-wrap: wrap;
+    }
+
+    .logos ul li {
+        padding: 15px;
+    }
+
+    .form-contacts {
+        flex-direction: column;
+    }
+
+    .form-message {
+        margin-top: 30px;
+    }
+
+    .form-contacts .form-message textarea {
+        width: 450px;
+        height: 100px;
+    }
+
+    #toTop {
+        right: 40px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .padding {
+        padding: 50px 0;
+    }
+
+    .header-promo{
+        height: 400px;
+    }
+
+    .services-promo {
+        flex-wrap: wrap;
+    }
+
+    .services-promo > div:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .services-promo > div:nth-child(2) {
+        margin: 30px 0;
+    }
+
+    .portfolio-list {
+        margin-top: 50px;
+    }
+
+    .about-list > .empty {
+        display: none;
+    }
+
+    .about-list > .about-list-box {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-item-img:nth-child(even),
+    .about-item-img:nth-child(odd),
+    .about-item .about-description {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-list:nth-child(odd) .about-item {
+        padding-right: 0;
+    }
+
+    .about-list:not(:first-child) .about-list-box:nth-child(even) {
+        border: none;
+        flex-direction: column;
+    }
+
+    .about-list:not(:first-child) .about-list-box:nth-child(odd) {
+        border: none;
+    }
+
+    .about-list:nth-child(even) .about-item {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .contacts {
+        background-size: auto;
+        background-position: top;
+    }
+    
+    .form-contacts {
+        margin-top: 20px;
+    }
+
+    .form-contacts .form-description {
+        margin-right: 0;
+    }
+
+    .footer .container span {
+        font-size: 14px;
+    }
+
+    .footer .footer-social > div {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media (max-width: 672px) {
+
+    h3,
+    span {
+        text-align: center;
+    }
+
+    .header {
+        top: 15px;
+    }
+
+    .header nav ul {
+        width: 200px;       
+    }
+
+    .header nav ul li a {
+        font-size: 18px;
+    }
+
+    .header .logo {
+        width: 60px;
+        height: 20px;
+    }
+
+    .header-promo {
+        height: 250px;
+        background-size: cover;
+    }
+
+    .promo h2 {
+        font-size: 18px;
+    }
+
+    .promo span {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 15px 40px;
+    }
+
+    .portfolio-item .portfolio-image,
+    .portfolio-item .portfolio-image img {
+        width: 250px;
+        height: 260px;
+    }
+
+    .about-list .about-item {
+        width: 100%;
+    }
+
+    .our-team .team-description {
+        width: 100%;
+    }
+
+    .logos ul {
+        justify-content: flex-start;
+    }
+
+    .logos ul li:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .form-contacts input,
+    .form-contacts .form-message textarea {
+        width: 300px;
+    }
+
+    .footer {
+        padding: 10px 0 25px 0;
+    }
+
+    .footer .container {
+        flex-direction: column-reverse;
+    }
+
+    .footer .container span {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer .footer-social {
+        width: 100%;        
+    }
+
+    .footer .footer-social > div {
+        margin-bottom: 10px; 
+    }
+
+    .footer .footer-social > div:not(:last-child) {
+        margin-right: 20px;               
+    }     
+    
+}
+
+@media (max-width: 410px) {
+    h3 {
+        font-size: 26px;
+    }
+
+    .form-contacts input, .form-contacts .form-message textarea {
+        width: 280px;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-contacts input, .form-contacts .form-message textarea {
+        width: 240px;
+    }
+}

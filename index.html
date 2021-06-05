@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden-one-page-site</title>
+    <link rel="stylesheet" href="css/style.css" />    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/media.css" />
+    
+    <base target="_blank" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#nav").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 1500);
+           });
+       });
+
+       $(function() { 
+        $(window).scroll(function() {        
+        if($(this).scrollTop() != 0) {        
+            $('#toTop').fadeIn();        
+            } else {        
+            $('#toTop').fadeOut();        
+            }        
+        });        
+            $('#toTop').click(function() {        
+            $('body,html').animate({scrollTop:0},800);        
+            });        
+        });
+    </script>
+
+</head>
+<body>
+    <div class="golden-site">
+
+        <div class="header-promo">
+            <div class="container">
+
+                <header class="header" id="header">
+                    <a href="#header" target="_self"><img src="img/Logo-Treehouse.png" alt="Logo-treehouse" class="logo" /></a>
+                    
+                    <nav id="nav">
+                        <input id="menu_toggle" type="checkbox" />
+                        <label class="menu_btn" for="menu_toggle">
+                          <span></span>
+                        </label>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contacts">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </header>
+
+                <section class="promo">
+
+                    <h2>Welcome to Our Studio!</h2>
+                    <span>It's nice to meet you</span>
+
+                    <button class="button">Tell me more</button>
+
+                </section>
+
+            </div>
+        </div>
+
+        <section class="padding services" id="services">
+            <div class="container">
+                <h3>Services</h3>
+                <span>Proin iaculis purus consequat sem cure.</span>
+
+                <div class="services-promo">
+
+                    <div>
+                        <div class="border-img"><img src="img/Icon-Basket.png" alt="Icon-Basket" /></div>
+                        <h4>E-commerce</h4>
+                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+
+                    <div>
+                        <div class="border-img"><img src="img/Icon-Laptop.png" alt="Icon-Laptop" /></div>
+                        <h4>Responsive Web</h4>
+                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+
+                    <div>
+                        <div class="border-img"><img src="img/Icon-Locked.png" alt="Icon-Locked" /></div>
+                        <h4>Web security</h4>
+                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="padding portfolio" id="portfolio">
+            <div class="container">
+                <h3>Our portfolio</h3>
+                <span>Proin iaculis purus consequat sem cure.</span>
+
+                <div class="portfolio-list">
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-image"><a href="#"><img src="img/portfolio-image-1.png" alt="portfolio-image-1"></a></div>
+                        <div class="portfolio-name">Ebony & Ivory</div>
+                        <div class="portfolio-description">Branding</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image"><a href="#"><img src="img/portfolio-image-2.png" alt="portfolio-image-2"></a></div>
+                        <div class="portfolio-name">Smart Stationary</div>
+                        <div class="portfolio-description">Print Design</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image"><a href="#"><img src="img/portfolio-image-3.png" alt="portfolio-image-3"></a></div>
+                        <div class="portfolio-name">Clever Poster</div>
+                        <div class="portfolio-description">Print Design</div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-list">
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-image"><a href="#"><img src="img/portfolio-image-4.png" alt="portfolio-image-4"></a></div>
+                        <div class="portfolio-name">Vinyl Record</div>
+                        <div class="portfolio-description">Product Mock-Up</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image"><a href="#"><img src="img/portfolio-image-5.png" alt="portfolio-image-5"></a></div>
+                        <div class="portfolio-name">Treehouse Template</div>
+                        <div class="portfolio-description">Web Design</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image"><a href="#"><img src="img/portfolio-image-6.png" alt="portfolio-image-6"></a></div>
+                        <div class="portfolio-name">Burned Logo</div>
+                        <div class="portfolio-description">Branding</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="padding about" id="about">
+            <div class="container">
+                <h3>About us</h3>
+                <span>Proin iaculis purus consequat sem cure.</span>
+
+                <div class="about-container">
+
+                    <div class="about-list">
+
+                        <div class="about-list-box">
+                            <div class="about-item">
+                                <div class="about-date">July 2010</div>
+                                <div class="about-name">Our Humble Beginnings</div>
+                                <div class="about-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</div>
+                            </div>
+                            <div class="about-item-img img1"></div>
+                        </div>
+
+                        <div class="empty"></div>
+                    </div>
+
+                    <div class="about-list">
+                        <div class="empty"></div>
+
+                        <div class="about-list-box">
+                            <div class="about-item-img img2"></div>
+                            <div class="about-item">
+                                <div class="about-date">January 2011</div>
+                                <div class="about-name">Facing Startup Battles</div>
+                                <div class="about-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit rhoncus posuere odio in tincidunt.</div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="about-list">
+
+                        <div class="about-list-box">
+                            <div class="about-item">
+                                <div class="about-date">December 2012</div>
+                                <div class="about-name">Enter The Dark Days</div>
+                                <div class="about-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni.</div>
+                            </div>                        
+                            <div class="about-item-img img3"></div>
+                        </div>
+
+                        <div class="empty"></div>
+                    </div>
+
+                    <div class="about-list">
+                        <div class="empty"></div>
+
+                        <div class="about-list-box">
+                            <div class="about-item-img img4"></div>
+                            <div class="about-item">
+                                <div class="about-date">February 2014</div>
+                                <div class="about-name">Our Triumph</div>
+                                <div class="about-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit zenean.</div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="about-list">
+                        <div class="about-list-box">   
+                            <div class="about-item">
+
+                            </div>
+
+                            <div class="about-item-img img5"><span>Our</span> <span>Story</span> <span>Continues</span> <span>...</span></div>
+                        </div> 
+
+                        <div class="empty"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="padding our-team">
+            <div class="container">
+                <h3>Our amazing team</h3>
+                <span>Proin iaculis purus consequat sem cure.</span>
+
+                <div class="teammates">
+
+                    <div class="teammate">
+                        <div class="photo photo-1"></div>
+                        <span class="teammate-name">Kimberly Thompson</span>
+                        <span class="teammate-profession">Marketer</span>
+                        <div class="teammate-social">
+                            <div class="teammate-tw"><a href="https://twitter.com/"></a></div>
+                            <div class="teammate-fb"><a href="https://www.facebook.com/"></a></div>
+                            <div class="teammate-p"><a href="https://www.pinterest.com/"></a></div>
+                        </div>
+                    </div>
+                    <div class="teammate">
+                        <div class="photo photo-2"></div>
+                        <span class="teammate-name">Rico Massimo</span>
+                        <span class="teammate-profession">Coder</span>
+                        <div class="teammate-social">
+                            <div class="teammate-tw"><a href="https://twitter.com/"></a></div>
+                            <div class="teammate-fb"><a href="https://www.facebook.com/"></a></div>
+                            <div class="teammate-g"><a href="https://mail.google.com/"></a></div>
+                        </div>
+                    </div>
+                    <div class="teammate">
+                        <div class="photo photo-3"></div>
+                        <span class="teammate-name">Uku Mason</span>
+                        <span class="teammate-profession">Graphic Designer</span>
+                        <div class="teammate-social">                            
+                            <div class="teammate-fb"><a href="https://www.facebook.com/"></a></div>
+                            <div class="teammate-p"><a href="https://www.pinterest.com/"></a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <span class="team-description">Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt proin iaculis.</span>
+
+            </div>
+        </section>
+
+        <section class="padding logos">
+            <div class="container">
+                <ul>
+                    <li><a href="https://envato.com"><img src="img/envato.png" alt="Envato"></a></li>
+                    <li><a href="https://wordpress.org/"><img src="img/WordPress.png" alt="WP"></a></li>
+                    <li><a href="https://tutsplus.com/"><img src="img/Tuts+.png" alt="Tuts"></a></li>
+                    <li><a href="https://microlancer.io/"><img src="img/Microlancer.png" alt="Microlancer"></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="padding contacts" id="contacts">
+            <div class="container">
+                <h3>Contact us</h3>
+                <span>Proin iaculis purus consequat sem cure.</span>
+
+                <form method="GET">
+                    <div class="form">
+                        <div class="form-contacts">
+
+                            <div class="form-description">
+                                <input type="text" maxlength="12" minlength="3" name="name" placeholder="Your name *" />
+                                <input type="email" name="email" placeholder="Your e-mail *" />
+                                <input type="text" name="subject" placeholder="Subject" />
+                            </div>
+
+                            <div class="form-message">
+                                <textarea name="message" minlength="20" placeholder="Your message *" ></textarea>                       
+                            </div>
+
+                        </div>    
+                                    
+                        <button>Send message</button>
+                    </div>
+                </form>
+
+                
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <span>Copyright 2014 <a href="FreebiesXpress.com">FreebiesXpress.com</a></span>
+
+                <div class="footer-social">
+                    <div class="footer-tw"><a href="https://twitter.com/"></a></div>
+                    <div class="footer-fb"><a href="https://www.facebook.com/"></a></div>
+                    <div class="footer-p"><a href="https://www.pinterest.com/"></a></div>
+                    <div class="footer-g"><a href="https://mail.google.com/"></a></div>
+                </div>
+            </div>
+
+
+        </footer>
+
+        <div ID = "toTop" > ^ Наверх </div>
+
+    </div>
+</body>
+</html>
